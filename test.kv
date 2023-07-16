@@ -1,0 +1,31 @@
+<Root>:
+    MDCard:
+        pos_hint: {"center_x": 0.5, "y": 0.05}
+        size_hint_x: 0.95
+        size_hint_y: 0.2
+        padding:20
+        RelativeLayout:
+            SquareIconButton:
+                label_text: 'проверка'
+                left_icon:"arrow-left"
+                pos_hint: {"x": 0, "center_y": 0.5}
+            SquareIconButton:
+                label_text: 'проверка'
+                right_icon:"arrow-right"
+                pos_hint: {"right": 1, "center_y": 0.5}
+
+
+<SquareIconButton>:
+    size_hint_x: 0.3
+    BoxLayout:
+        MDIcon:
+            icon: root.left_icon
+        MDLabel:
+            max_lines: 1
+            text: root.label_text
+            halign: 'center'
+        MDIcon:
+            icon: root.right_icon
+
+
+
